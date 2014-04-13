@@ -7,9 +7,7 @@ newDiv.style.background = "red";
 newDiv.style.color = "white";
 newDiv.style.top = height()-20 + "px";
 newDiv.style.left = "0px";
-newDiv.innerHTML = "Hello";
-var newContent = document.createTextNode("Hi there and greetings!");
-newDiv.appendChild(newContent);
+newDiv.innerHTML = "<marquee behavior='scroll' direction='right' scrollamount='5'>Your slide-in text goes here</marquee>";
 document.body.appendChild(newDiv);
 
 function height(){
