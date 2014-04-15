@@ -5,12 +5,11 @@
   "description": "This extension displays a news ticker at the bottom of every web page",
   "version": "0.1",
   "permissions": [
-    "https://secure.flickr.com/"
   ],
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["popup.js"]
+      "js": ["news_ticker.js"]
     }
   ],
   "browser_action": {
