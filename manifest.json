@@ -5,11 +5,12 @@
   "description": "This extension displays a news ticker at the bottom of every web page",
   "version": "0.1",
   "permissions": [
+    "http://www.theguardian.com/uk/rss"
   ],
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["news_ticker.js"]
+      "js": ["jquery-2.1.0.min.js", "news_ticker.js", "feed_handler.js"]
     }
   ],
   "browser_action": {
