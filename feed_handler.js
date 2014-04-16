@@ -13,10 +13,16 @@ function httpGet(url)
     }
 }
 
-function parseFeed(xml) {
-    $("body").append('Jquery is here');
-    //var xmlDoc = $.parseXML( xml );
-    alert(xml);
+function parseFeed(rss_data) {
+    var xml = rss_data,
+        xmlDoc = $.parseXML( xml ),
+        $xml = $(xmlDoc),
+        $items = $xml.find( "item" );
+    $top_10 = $items.slice(0,2);
+    //alert(top_10.text());
+    $top_10.each(function(){
+        alert($(this).text());
+    });
 }
 
 function handleFeed(feed_url) {
