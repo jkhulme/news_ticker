@@ -10,6 +10,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
+      "css": ["news_ticker.css"],
       "js": ["jquery-2.1.0.min.js", "feed_handler.js", "news_ticker.js"]
     }
   ],
