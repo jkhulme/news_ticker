@@ -19,19 +19,20 @@ function parseFeed(rss_data) {
         $xml = $(xmlDoc),
         $items = $xml.find( "item" );
     $top_10 = $items.slice(0,2);
-    //alert(top_10.text());
+    var headlines = [];
     $top_10.each(function(){
-        alert($(this).text());
+        var title = $(this).find( "title" ).text();
+        var link = $(this).find( "link" ).text();
+        headlines.push([title, link]);
     });
+    return headlines;
 }
 
 function handleFeed(feed_url) {
-    parseFeed(httpGet(feed_url));
+    return parseFeed(httpGet(feed_url));
 }
 
 function getFeeds() {
     var feeds = ["http://www.theguardian.com/uk/rss"];
-    feeds.map(handleFeed);
+    return feeds.map(handleFeed);
 }
-
-getFeeds();
