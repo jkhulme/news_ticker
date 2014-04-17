@@ -25,14 +25,14 @@ function build_news_feed(news){
     var output = "";
     for (var i=0;i<news.length;i++){
         for (var j=0;j<news[i].length;j++){
-            var title = news[i][j][0];
-            var link = news[i][j][1];
-            var story = "<a class='news_ticker-7ce5f950-c670-11e3-9c1a-0800200c9a66' href='"+link+"'>"+title+"</a>";
+            var source = news[i][j][0];
+            var title = news[i][j][1];
+            var link = news[i][j][2];
+            var story = "<a class='news_ticker-7ce5f950-c670-11e3-9c1a-0800200c9a66' href='"+link+"'>"+"["+source+"] "+title+"</a>";
             output += story + " || ";
         }
-        output = output.substring(0, output.length - 4);
     }
-    return output;
+    return output.substring(0, output.length - 4);
 }
 
 var news = getFeeds();
