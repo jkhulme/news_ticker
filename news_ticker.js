@@ -17,7 +17,7 @@ function add_ticker(news_feed){
     ticker_div.style.left = "0px";
     ticker_div.style.opacity = 0.8;
     ticker_div.style.zIndex = 9999;
-    ticker_div.innerHTML = "<marquee class='news_ticker-7ce5f950-c670-11e3-9c1a-0800200c9a67' behavior='scroll' direction='right' scrollamount='4'><font color='black'>"+news_feed+"</font></marquee>";
+    ticker_div.innerHTML = "<marquee class='news_ticker-7ce5f950-c670-11e3-9c1a-0800200c9a67' behavior='scroll' direction='left' scrollamount='4'><font color='black'>"+news_feed+"</font></marquee>";
     document.body.appendChild(ticker_div);
 }
 
