@@ -1,9 +1,9 @@
 function height(){
-   return window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight||0;
+   return $(window).height();
 }
 
 function width(){
-   return window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth||0;
+   return $(window).width();
 }
 
 function add_ticker(news_feed){
